@@ -17,4 +17,4 @@ cd /tmp
 git clone https://github.com/hashicorp-education/terramino-go.git
 cd terramino-go
 
-APP_NAME=${app_name} TERRAMINO_PORT=${port} go run main.go
+APP_NAME=${app_name} TERRAMINO_PORT=80 go run main.go
