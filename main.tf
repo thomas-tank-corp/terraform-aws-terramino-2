@@ -19,11 +19,6 @@ resource "aws_instance" "web" {
   instance_type   = "t3.small"
   security_groups = [aws_security_group.allow_web_traffic.name]
 
-  user_data = templatefile("boot.sh", {
-    app_name      = var.waypoint_application,
-    port          = var.port
-  })
-
   tags = {
     Name = "terramino-${var.waypoint_application}"
   }
